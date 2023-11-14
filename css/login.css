@@ -1,0 +1,77 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+ }
+ 
+ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+ }
+ 
+ h2 {
+    color: #E52424;
+ }
+ 
+ form {
+    text-align: left;
+    margin-top: 10px;
+ }
+ 
+ label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+ }
+ 
+ input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+ }
+ 
+ input[type="submit"] {
+    background-color: #555555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    float: right;   /* Canh trái và phải nút nhấn */
+ }
+ 
+ input[type="submit"]:hover {
+    background-color: #191970;
+ }
+ 
+ .error {
+    color: red;
+    margin-top: 10px;
+ }
+ 
+ .register-link {
+    margin-top: 20px;
+ }
+ 
+ .register-link a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+ }
+ 
+ .register-link a:hover {
+    color: #0000FF;
+ }
