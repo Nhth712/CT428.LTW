@@ -18,13 +18,14 @@
         } 
         
         else {
-            $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+            $sql = "SELECT * FROM login WHERE username = '$username' AND password = '$password'";
             $query = mysqli_query($conn, $sql);
 
             if (!$query) {
                 die('Query Failed: ' . mysqli_error($conn));
             }
 
+            // CẢNH BÁO NHẬP SAI
             $num_rows = mysqli_num_rows($query);
 
             if ($num_rows == 0) {

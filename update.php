@@ -13,7 +13,7 @@
          $message[] = 'Vui lòng điền đầy đủ thông tin!!';
       }
       else{
-         $update_data = "UPDATE products SET name='$product_name', price='$product_price', image='$product_image'  WHERE id = '$id'";
+         $update_data = "UPDATE product SET name='$product_name', price='$product_price', image='$product_image'  WHERE id = '$id'";
          $upload = mysqli_query($conn, $update_data);
          if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -46,7 +46,7 @@
    <div class="admin-product-form-container centered">
 
    <?php
-      $select = mysqli_query($conn, "SELECT * FROM products WHERE id = '$id'");
+      $select = mysqli_query($conn, "SELECT * FROM product WHERE id = '$id'");
       while($row = mysqli_fetch_assoc($select)){
    ?>
    

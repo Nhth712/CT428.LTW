@@ -22,7 +22,7 @@
         } 
         
         else {
-            $sql = "select * from users where username = '$username'";
+            $sql = "select * from login where username = '$username'";
             $query = mysqli_query($conn, $sql);
             $num_rows = mysqli_num_rows($query);
             
@@ -35,9 +35,9 @@
             else {
                 // Nếu có yêu cầu mã hóa mật khẩu
                 // $hashpw = password_hash($password, PASSWORD_DEFAULT);
-                // $sql = "INSERT INTO users(username, password, name, email) VALUES ('$username', '$hashpw', '$name', '$email')";
+                // $sql = "INSERT INTO login(username, password, name, email) VALUES ('$username', '$hashpw', '$name', '$email')";
                 
-                $sql = "INSERT INTO users(username, password, name, email) VALUES ('$username', '$password', '$name', '$email')";
+                $sql = "INSERT INTO login (username, password, name, email) VALUES ('$username', '$password', '$name', '$email')";
                 
                 if (mysqli_query($conn, $sql)) {
                     header('Location: login.php');

@@ -9,7 +9,7 @@
     $server_host = "localhost";
 
         // Tên CSDL
-    $database = 'signup';
+    $database = 'b2013908';
 
         // Kết nối CSDL
     $conn = mysqli_connect($server_host,$server_username,$server_password,$database); 

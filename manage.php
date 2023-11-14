@@ -14,7 +14,7 @@
          $message[] = 'Vui lòng điền đầy đủ thông tin.';
       }
       else{
-         $insert = "INSERT INTO products(name, price, image) VALUES('$product_name', '$product_price', '$product_image')";
+         $insert = "INSERT INTO product(name, price, image) VALUES('$product_name', '$product_price', '$product_image')";
          $upload = mysqli_query($conn,$insert);
          if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -30,7 +30,7 @@
    // Xóa sản phẩm
    if(isset($_GET['delete'])){
       $id = $_GET['delete'];
-      mysqli_query($conn, "DELETE FROM products WHERE id = $id");
+      mysqli_query($conn, "DELETE FROM product WHERE id = $id");
       header('location:manage.php');
    };
 
@@ -87,7 +87,7 @@ if(isset($message)){
 
    <?php
 
-   $select = mysqli_query($conn, "SELECT * FROM products");
+   $select = mysqli_query($conn, "SELECT * FROM product");
    
    ?>
    <div class="product-display">
